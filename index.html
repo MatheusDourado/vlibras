@@ -1,20 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Widget</title>
+
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .nulibras, .enabled {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            border-radius: 13px;
+            border: 1px solid #d0d0d0 !important;
+            width: 40px;
+            height: 40px;
+            margin: 0 10px 100px 0;
+        } 
+        
+        .nulibras img {
+            width: 31px;
+        }
+    </style>
 </head>
 <body>
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+    <div class="widgets">
+        <div class="nulibras">
+            <a href="https://nuvidio.com/vns.atendimento.gdf" target="_blank">
+                <img class="img-responsive"
+                    src="https://www.seplad.df.gov.br/wp-conteudo/themes/site-secretarias/img/atendimento-virtual.png"
+                    alt="Icone Nulibras" 
+                />
+            </a>
         </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
+    </script>
 </body>
+
 </html>
